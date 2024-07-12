@@ -56,15 +56,10 @@ namespace MinioTest
             var bucketsResult = await _minioClient.ListBucketsAsync();
             if (bucketsResult != null)
             {
-
                 for (int i = 0; i < bucketsResult.Buckets.Count; i++)
                 {
                     Console.WriteLine($"Bucket {i + 1}: {bucketsResult.Buckets[i].Name}");
                 }
-                //foreach (var b in bucketsResult.Buckets)
-                //{
-                //    Console.WriteLine($"Bucket name : {b.Name}");
-                //}
             }
         }
 
